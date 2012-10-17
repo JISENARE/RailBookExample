@@ -16,4 +16,8 @@ class ViewController < ApplicationController
     @book = Book.new(:publish => '技術評論社')
     @books = Book.select('DISTINCT publish')
   end
+  def group_select
+    @review = Review.new()
+    @authors = Author.all
+  end
 end
