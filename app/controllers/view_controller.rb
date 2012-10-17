@@ -12,4 +12,8 @@ class ViewController < ApplicationController
   def select
     @book = Book.new(:publish => '技術評論社')
   end
+  def col_select
+    @book = Book.new(:publish => '技術評論社')
+    @books = Book.select('DISTINCT publish')
+  end
 end
